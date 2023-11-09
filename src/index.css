@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body{
+  /* background: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?cs=srgb&dl=pexels-instawalli-176851.jpg&fm=jpg'); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: rgb(20,20,20) */
+  background-color: black;
+
+}
+
+.page-background {
+  background: rgb(20,20,20)
+}
+

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.containerx{
+    overflow: hidden;
+    font-family: 'Roboto';
+     margin:10% 0 0 0 ; 
+    position : relative;
+}
+
+
+
+.wrapper{
+    display:flex;
+    height: 1200px;
+    width:100%;
+    margin: 0px auto;
+    perspective: 450px;
+}
+
+.scroll-text{
+color:#ffc909;
+font-size: 3vw;
+line-height:1.5em;
+font-weight: bold;
+text-align: justify;
+position:relative;
+animation:scroll 180s linear forwards;
+transform: rotateX(20deg);
+
+}
+.scroll-title{
+    text-align: center;
+}
+
+@keyframes scroll {
+	from { top: 0; transform: translateZ(0) rotateX(20deg); }
+	to { top: -7500px; transform: translateZ(-3500px) rotateX(21deg); }
+}
