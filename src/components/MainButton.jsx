@@ -24,8 +24,12 @@ const MainButton = ({ action }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInput = (e) => {
-    setInputValue(parseFloat(e.target.value));
-    
+    const inputValue = parseFloat(e.target.value);
+   
+    if (!isNaN(inputValue) && inputValue >= 0) {
+      setInputValue(inputValue); 
+     
+    } else{ alert('Nooope, Invalid input')}
   };
 
   const handleSubmit = () => {
@@ -82,7 +86,7 @@ const MainButton = ({ action }) => {
           </p>
 
           <form className="flex justify-center align-middle gap-4">
-            {moneyBalance <= 0 && (
+          
               <div className="flex flex-col gap-4">
                 <fieldset className="w-20 space-y-1 text-gray-100">
                   <label
@@ -94,7 +98,8 @@ const MainButton = ({ action }) => {
                   </label>
                   <div className="flex">
                     <input
-                      type="text"
+                      type="number"
+                      step='500'
                       name="price"
                       id="price"
                       placeholder="0,00"
@@ -126,9 +131,9 @@ const MainButton = ({ action }) => {
                   </button>
                 </div>
               </div>
-            )}
+           
           </form>
-          {moneyBalance > 0 && (
+          {moneyBalance > 500 && (
             <button
               type="button"
               className={
