@@ -44,7 +44,7 @@ const MainButton = ({ action }) => {
   const saber = new Audio(lsaber);
 
   return (
-    <section className="p-6 dark:bg-gray-800 dark:text-gray-100 flex justify-center w-full">
+    <section className="p-6 flex justify-center w-full">
       <div className="opacity-80">
       <ReactPlayer
           ref={reactPlayerRef} // Assign the ref to the ReactPlayer
@@ -64,7 +64,7 @@ const MainButton = ({ action }) => {
       <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5 absolute">
         <div
           id="cont"
-          className=" ml-80 px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-900 absolute -mt-10 z-50"
+          className=" ml-80 px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 absolute -mt-10 z-50"
         >
           <span className="block mb-2 text-gray-200">
             Welcome to Star Wars trading Cards game
