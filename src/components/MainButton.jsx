@@ -64,7 +64,7 @@ const MainButton = ({ action }) => {
       <div className="container grid gap-6 text-center sm:grid-cols-2  absolute">
         <div
           id="cont"
-          className=" sm:ml-80 rounded-md sm:px-12  absolute -mt-40 mr-12 sm:-mt-60 z-50"
+          className=" sm:ml-80 rounded-md sm:px-12  absolute -mt-36 mr-28 sm:-mt-60 z-50"
         >
           <span className="block mb-2 text-gray-200">
             Welcome to Star Wars trading Cards game

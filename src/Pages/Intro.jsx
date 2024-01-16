@@ -44,7 +44,7 @@ const Intro = () => {
                 }}
               >
                 A long time ago in a galaxy far, <br />
-                <span className="mr-80 leading-none">far away ....</span>
+                <span className="sm:mr-80 leading-none">far away ....</span>
               </h1>
             
             <button id='presstart' className="mt-10 text-yellow-400"

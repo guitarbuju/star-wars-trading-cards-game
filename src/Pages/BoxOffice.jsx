@@ -79,7 +79,7 @@ const BoxOffice = () => {
     <div>
       {clicked ? (
         <div className="flex flex-col">
-          <ul className="grid grid-cols-5 gap-5 ">
+          <ul className="grid grid-cols-2 gap-1 sm:grid-cols-5 sm:gap-5 sm:mt-0 mt-28">
             {filteredCards.map((card, index) => (
               <li
                 key={index}
