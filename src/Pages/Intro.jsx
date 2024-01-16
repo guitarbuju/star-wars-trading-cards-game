@@ -36,12 +36,11 @@ const Intro = () => {
             
               <h1
                 id="along"
-                className="leading-none"
+                className="leading-none sm:text-4xl text-xl mt-48"
                 style={{
                   color: "#10f9f1",
-                  fontSize: "40px",
                   opacity: 0.8,
-                  marginTop: "200px",
+               
                 }}
               >
                 A long time ago in a galaxy far, <br />

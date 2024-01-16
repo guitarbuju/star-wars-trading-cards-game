@@ -44,12 +44,12 @@ const MainButton = ({ action }) => {
   const saber = new Audio(lsaber);
 
   return (
-    <section className="p-6 flex justify-center w-full">
-      <div className="opacity-80">
+    <section className="p-6 flex-col items-center align-center sm:flex sm:justify-center sm:align-middle w-full">
+      <div className="mt-20 sm:mt-0">
       <ReactPlayer
           ref={reactPlayerRef} // Assign the ref to the ReactPlayer
           width='100%'
-          height='auto'
+           height='auto'
           url={video}
           controls={false}
           loop={true}
@@ -61,18 +61,18 @@ const MainButton = ({ action }) => {
        
       </div>
 
-      <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5 absolute">
+      <div className="container grid gap-6 text-center sm:grid-cols-2  absolute">
         <div
           id="cont"
-          className=" ml-80 px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 absolute -mt-10 z-50"
+          className=" sm:ml-80 rounded-md sm:px-12  absolute -mt-40 mr-12 sm:-mt-60 z-50"
         >
           <span className="block mb-2 text-gray-200">
             Welcome to Star Wars trading Cards game
           </span>
-          <h1 className="text-5xl font-extrabold text-yellow-400">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-yellow-400">
             Get your Cards Here
           </h1>
-          <p className="my-8">
+          <p className="sm:my-8">
             <span className="font-medium  text-gray-200">
               We have <span>{cards.length} </span>collectible cards
             </span>
@@ -137,7 +137,7 @@ const MainButton = ({ action }) => {
             <button
               type="button"
               className={
-                "w-52 h-10 mt-12 py-2 font-semibold rounded bg-orange-500 text-gray-900 "
+                "w-52 h-10 mt-4 sm:mt-12 py-2 font-semibold rounded bg-orange-500 text-gray-900 "
               }
               onClick={() => {
                 setMoneyBalance(moneyBalance - 500);

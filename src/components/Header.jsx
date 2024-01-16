@@ -14,14 +14,16 @@ const Header = () => {
   // 
   return (
     <header className="p-4 mb-10">
-      <div className="container flex justify-between h-16 mx-auto ">
+      <div className="container  sm:flex sm:justify-between h-16  w-full">
         <Link to="/">
           <button>
             <img className="w-40 " src={logo} />
           </button>
         </Link> 
         <div>
-        <h1 style={{ color: "#10f9f1", fontSize: "40px", opacity: 0.7 }}>
+        <h1 
+        className="sm:text-4xl text-xl"
+        style={{ color: "#10f9f1", opacity: 0.7 }}>
           A long time ago in a galaxy far far away ...
         </h1>
         <h3 className="text-yellow-400">
