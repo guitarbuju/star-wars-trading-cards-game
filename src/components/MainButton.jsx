@@ -6,18 +6,17 @@ import { cards } from "../../stuff";
 import blaster from "../assets/blaster.mp3";
 import lsaber from "../assets/lsaber.mp3";
 import ReactPlayer from "react-player";
+import poster from "../assets/sw_poster.jpeg";
 
 const MainButton = ({ action }) => {
+  const video =
+    "https://res.cloudinary.com/dfbflavif/video/upload/v1699561919/ouemox3yo9ouquvagc9m.mp4";
 
-   const video = "https://res.cloudinary.com/dfbflavif/video/upload/v1699561919/ouemox3yo9ouquvagc9m.mp4";
-  
-  const reactPlayerRef = useRef(null); 
+  const reactPlayerRef = useRef(null);
   // const handleVideoReady = () => {
   //   // Once the video is ready, autoplay it
   //   reactPlayerRef.current.play();
   // };
-
-  
 
   const { moneyBalance, setMoneyBalance } = useMoneyContext();
 
@@ -25,11 +24,12 @@ const MainButton = ({ action }) => {
 
   const handleInput = (e) => {
     const inputValue = parseFloat(e.target.value);
-   
+
     if (!isNaN(inputValue) && inputValue >= 0) {
-      setInputValue(inputValue); 
-     
-    } else{ alert('Nooope, Invalid input')}
+      setInputValue(inputValue);
+    } else {
+      alert("Nooope, Invalid input");
+    }
   };
 
   const handleSubmit = () => {
@@ -45,26 +45,28 @@ const MainButton = ({ action }) => {
 
   return (
     <section className="p-6 flex-col items-center align-center sm:flex sm:justify-center sm:align-middle w-full">
-      <div className="mt-20 sm:mt-0">
-      <ReactPlayer
-          ref={reactPlayerRef} // Assign the ref to the ReactPlayer
-          width='100%'
-           height='auto'
-          url={video}
-          controls={false}
-          loop={true}
-          muted={true}
-          playing={true} // Set "playing" prop to true to enable autoplay
-          // onReady={handleVideoReady} // Add this callback
-          // style={{border:'2px solid white',borderRadius:'25px'}}
-        />
-       
+      <div className="mt-20 sm:mt-0 ">
+        <div className=" hidden sm:block">
+          <ReactPlayer
+            ref={reactPlayerRef} // Assign the ref to the ReactPlayer
+            width="100%"
+            height="auto"
+            url={video}
+            controls={false}
+            loop={true}
+            muted={true}
+            playing={true} // Set "playing" prop to true to enable autoplay
+            // onReady={handleVideoReady} // Add this callback
+            // style={{border:'2px solid white',borderRadius:'25px'}}
+          />
+        </div>
+        <img className="block sm:hidden absolute w-3/4 opacity-40" src={poster} />
       </div>
 
       <div className="container grid gap-6 text-center sm:grid-cols-2  absolute">
         <div
           id="cont"
-          className=" sm:ml-80 rounded-md sm:px-12  absolute -mt-36 mr-28 sm:-mt-60 z-50"
+          className=" sm:ml-80 rounded-md sm:px-12  absolute  mr-28 sm:-mt-60 z-50"
         >
           <span className="block mb-2 text-gray-200">
             Welcome to Star Wars trading Cards game
@@ -86,52 +88,50 @@ const MainButton = ({ action }) => {
           </p>
 
           <form className="flex justify-center align-middle gap-4">
-          
-              <div className="flex flex-col gap-4">
-                <fieldset className="w-20 space-y-1 text-gray-100">
-                  <label
-                    id="insert"
-                    htmlFor="price"
-                    className="block text-sm font-medium"
-                  >
-                    Insert Tokens
-                  </label>
-                  <div className="flex">
-                    <input
-                      type="number"
-                      step='500'
-                      name="price"
-                      id="price"
-                      placeholder="0,00"
-                      className="flex flex-1 text-right border sm:text-sm rounded-l-md focus:ri border-gray-100 text-gray-800 bg-gray-200 focus:ri h-10"
-                      onChange={handleInput}
-                    />
-                    <span className="flex items-center px-3 pointer-events-none sm:text-sm rounded-r-md dark:bg-gray-700 border w-12">
-                      €
-                    </span>
-                  </div>
-                </fieldset>
-
-                <div className="flex justify-center align-middle gap-2 text-xs">
-                  <button
-                    type="button"
-                    className="w-24 py-2 font-semibold rounded bg-yellow-400 text-gray-900 "
-                    onClick={handleSubmit}
-                  >
-                    Pay!
-                  </button>
-                  <button
-                    type="reset"
-                    className="w-24 py-2 font-semibold rounded bg-green-600 text-gray-900 "
-                    onClick={() => {
-                      setInputValue(0);
-                    }}
-                  >
-                    Reset
-                  </button>
+            <div className="flex flex-col gap-4">
+              <fieldset className="w-20 space-y-1 text-gray-100">
+                <label
+                  id="insert"
+                  htmlFor="price"
+                  className="block text-sm font-medium"
+                >
+                  Insert Tokens
+                </label>
+                <div className="flex">
+                  <input
+                    type="number"
+                    step="500"
+                    name="price"
+                    id="price"
+                    placeholder="0,00"
+                    className="flex flex-1 text-right border sm:text-sm rounded-l-md focus:ri border-gray-100 text-gray-800 bg-gray-200 focus:ri h-10"
+                    onChange={handleInput}
+                  />
+                  <span className="flex items-center px-3 pointer-events-none sm:text-sm rounded-r-md dark:bg-gray-700 border w-12">
+                    €
+                  </span>
                 </div>
+              </fieldset>
+
+              <div className="flex justify-center align-middle gap-2 text-xs">
+                <button
+                  type="button"
+                  className="w-24 py-2 font-semibold rounded bg-yellow-400 text-gray-900 "
+                  onClick={handleSubmit}
+                >
+                  Pay!
+                </button>
+                <button
+                  type="reset"
+                  className="w-24 py-2 font-semibold rounded bg-green-600 text-gray-900 "
+                  onClick={() => {
+                    setInputValue(0);
+                  }}
+                >
+                  Reset
+                </button>
               </div>
-           
+            </div>
           </form>
           {moneyBalance > 500 && (
             <button
