@@ -13,20 +13,20 @@ const Header = () => {
 
   // 
   return (
-    <header className="p-4 mb-10">
-      <div className="container  sm:flex sm:justify-between h-16  w-full">
+    <header className="p-4 flex justify-center align-middle">
+      <div className="  md:flex md:justify-between h-14  w-full md:w-3/4">
         <Link to="/">
           <button>
-            <img className="w-40 " src={logo} />
+            <img className="w-32 " src={logo} />
           </button>
         </Link> 
         <div>
         <h1 
-        className="sm:text-4xl text-xl"
+        className="text-xl"
         style={{ color: "#10f9f1", opacity: 0.7 }}>
           A long time ago in a galaxy far far away ...
         </h1>
-        <h3 className="text-yellow-400">
+        <h3 className="text-yellow-400 text-md">
           Current Balance: {moneyBalance} Republic Dataries
         </h3>
 
