@@ -44,9 +44,9 @@ const MainButton = ({ action }) => {
   const saber = new Audio(lsaber);
 
   return (
-    <section className="p-6 flex-col items-center align-center sm:flex sm:justify-center sm:align-middle w-full">
-      <div className="mt-20 sm:mt-0 ">
-        <div className=" hidden sm:block">
+    <section className="p-6  flex-col items-center align-center sm:flex sm:justify-center sm:align-middle w-full">
+      <div className="mt-20 sm:mt-0 sm:flex justify-center align-middle">
+        <div className=" hidden md:block md:w-3/4">
           <ReactPlayer
             ref={reactPlayerRef} // Assign the ref to the ReactPlayer
             width="100%"
@@ -60,32 +60,37 @@ const MainButton = ({ action }) => {
             // style={{border:'2px solid white',borderRadius:'25px'}}
           />
         </div>
-        <img className="block sm:hidden absolute w-3/4 opacity-40" src={poster} />
+        <img className="block md:hidden absolute sm:w-2/4 sm:relative w-3/4 opacity-40" src={poster} />
       </div>
 
-      <div className="container grid gap-6 text-center sm:grid-cols-2  absolute">
+      <div className="container grid gap-6 text-center sm:flex  absolute ">
         <div
           id="cont"
-          className=" sm:ml-80 rounded-md sm:px-12  absolute  mr-28 sm:-mt-60 z-50"
+          className=" rounded-md md:px-12  absolute mr-28 ml-16   sm:-mt-48 md:-mt-32 z-50 md:flex md:justify-center md:align-middle "
         >
-          <span className="block mb-2 text-gray-200">
+        <div className="flex-col-reverse w-52 md:w-72">
+          <span className="block mb-2 text-gray-200 ">
             Welcome to Star Wars trading Cards game
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-yellow-400">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-yellow-400">
             Get your Cards Here
           </h1>
-          <p className="sm:my-8">
-            <span className="font-medium  text-gray-200">
+          <p className="">
+            <span className=" text-lg font-medium  text-gray-200">
               We have <span>{cards.length} </span>collectible cards
             </span>
-            <span className="text-yellow-400 ml-2">Collect&apos;em all...</span>
+            <span className="text-lg text-yellow-400 ml-2">Collect&apos;em all...</span>
           </p>
-          <p className="font-medium text-sm text-gray-200">
+        </div>
+          <div className="flex-col">
+             <p className="font-medium text-sm text-gray-200">
             Your current Balance is:
             <span className="text-yellow-400 ml-4 text-lg shadow-lg">
               {moneyBalance} Republic Dataries
             </span>
           </p>
+        
+         
 
           <form className="flex justify-center align-middle gap-4">
             <div className="flex flex-col gap-4">
@@ -149,13 +154,9 @@ const MainButton = ({ action }) => {
             </button>
           )}
         </div>
-        {/* <img
-          id="mainImg"
-          src={poster}
-          alt=""
-          className="object-cover w-4/4 rounded-md xl:col-span-3 dark:bg-gray-500 opacity-20 -mt-10 ml-72 mr-4"
-        /> */}
+        </div>
       </div>
+
     </section>
   );
 };
