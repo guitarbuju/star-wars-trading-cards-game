@@ -34,7 +34,7 @@ export const cards = [
 export function GetRandomNumber() {
   let group = [];
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     let randomNumber = Math.floor(Math.random() * (30 - 1) + 1);
     group.push(randomNumber);
   }

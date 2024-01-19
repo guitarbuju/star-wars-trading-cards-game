@@ -26,7 +26,7 @@ const Header = () => {
         style={{ color: "#10f9f1", opacity: 0.7 }}>
           A long time ago in a galaxy far far away ...
         </h1>
-        <h3 className="text-yellow-400 text-md">
+        <h3 className="text-yellow-400 text-sm">
           Current Balance: {moneyBalance} Republic Dataries
         </h3>
 

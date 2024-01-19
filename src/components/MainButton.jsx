@@ -66,7 +66,7 @@ const MainButton = ({ action }) => {
       <div className="container grid gap-6 text-center sm:flex  absolute ">
         <div
           id="cont"
-          className=" rounded-md md:px-12  absolute mr-28 ml-16 md:ml-24 lg:ml-40 sm:-mt-48 md:-mt-32 z-50 md:flex md:justify-center md:align-middle "
+          className=" rounded-md md:px-12  absolute mr-28 ml-16 md:ml-24 lg:ml-40 xl:ml-72 sm:-mt-48 md:-mt-32 z-50 md:flex md:justify-center md:align-middle "
         >
         <div className="flex-col-reverse w-52 md:w-72">
           <span className="block mb-2 text-gray-200 ">
@@ -142,7 +142,7 @@ const MainButton = ({ action }) => {
             <button
               type="button"
               className={
-                "w-52 h-10 mt-4 sm:mt-12 py-2 font-semibold rounded bg-orange-500 text-gray-900 "
+                "w-52 h-10  mt-4 sm:mt-8 py-2 font-semibold rounded bg-orange-500 text-gray-900 "
               }
               onClick={() => {
                 setMoneyBalance(moneyBalance - 500);

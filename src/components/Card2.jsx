@@ -8,10 +8,10 @@ const Card = ({img, name, id , face}) => {
      <span className="">{id}</span>
      <div>
      {face ? <img src={img} alt=""
-      className="object-cover object-center w-full rounded-md h-20 sm:h-52 dark:bg-gray-500" />
+      className="object-cover object-center w-full rounded-md h-20 sm:h-52" />
       :
       <img src={img} alt=""
-      className="object-cover object-center w-full rounded-md h-20 sm:h-52 dark:bg-gray-500 opacity-5" />}
+      className="object-cover object-center w-full rounded-md h-20 sm:h-52  opacity-5" />}
       
      </div>
 	
