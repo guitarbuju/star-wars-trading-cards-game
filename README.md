@@ -42,3 +42,7 @@ We welcome contributions to enhance the app and make it even more enjoyable for 
 This project is licensed under the [MIT License](LICENSE.md).
 
 May the Force be with you, and happy trading! 🌌🚀
+
+
+
+Format: ![pic](https://github.com/guitarbuju/star-wars-trading-cards-game/blob/main/src/assets/star_wars_cover.png?raw=true)
