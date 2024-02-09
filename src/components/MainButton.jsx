@@ -44,7 +44,7 @@ const MainButton = ({ action }) => {
   const saber = new Audio(lsaber);
 
   return (
-    <section className="p-6  flex-col items-center align-center sm:flex sm:justify-center sm:align-middle w-full">
+    <section className="p-6  flex-col items-center align-center xs:flex xs:justify-center xs:align-middle w-full">
       <div className="mt-20 sm:mt-0 sm:flex justify-center align-middle">
         <div className=" hidden md:block md:w-3/4">
           <ReactPlayer
@@ -60,18 +60,19 @@ const MainButton = ({ action }) => {
             // style={{border:'2px solid white',borderRadius:'25px'}}
           />
         </div>
-        <img className="block md:hidden absolute sm:w-2/4 sm:relative w-3/4 opacity-40" src={poster} />
+         <img className="block md:hidden relative   w-3/4  opacity-40 xs:ml-6" src={poster} /> 
+        
+        
       </div>
 
       <div className="container grid gap-6 text-center sm:flex  absolute ">
         <div
           id="cont"
-          className=" rounded-md md:px-12  absolute mr-28 ml-16 md:ml-24 lg:ml-40 xl:ml-72 sm:-mt-48 md:-mt-32 z-50 md:flex md:justify-center md:align-middle "
+          className="  rounded-md md:px-12  absolute mr-28 ml-16 md:ml-24 lg:ml-40 xl:ml-72 sm:-mt-72 md:-mt-32 z-50 sm:flex md:justify-center md:align-middle "
+          
         >
-        <div className="flex-col-reverse w-52 md:w-72">
-          <span className="block mb-2 text-gray-200 ">
-            Welcome to Star Wars trading Cards game
-          </span>
+        <div className="flex-col-reverse w-52 md:w-72 -mt-20 sm:mt-0">
+          
           <h1 className="text-4xl lg:text-5xl font-extrabold text-yellow-400">
             Get your Cards Here
           </h1>
@@ -89,9 +90,6 @@ const MainButton = ({ action }) => {
               {moneyBalance} Republic Dataries
             </span>
           </p>
-        
-         
-
           <form className="flex justify-center align-middle gap-4">
             <div className="flex flex-col gap-4">
               <fieldset className="w-20 space-y-1 text-gray-100">

@@ -13,22 +13,22 @@ const Header = () => {
 
   // 
   return (
-    <header className="p-4 flex justify-center align-middle">
-      <div className="  md:flex md:justify-between h-14  w-full md:w-3/4">
+    <header className="p-2  xs:mb-10 sm:mb-5 flex justify-center">
+      <div className="container xs:w-3/4 sm:flex xs:justify-between h-16  md:w-full">
         <Link to="/">
           <button>
-            <img className="w-32 " src={logo} />
+            <img className=" w-40 md:w-28" src={logo} />
           </button>
         </Link> 
         <div>
         <h1 
-        className="text-xl"
+        className="md:text-2xl "
         style={{ color: "#10f9f1", opacity: 0.7 }}>
           A long time ago in a galaxy far far away ...
         </h1>
-        <h3 className="text-yellow-400 text-sm">
+        <h2 className="text-yellow-400  ">
           Current Balance: {moneyBalance} Republic Dataries
-        </h3>
+        </h2>
 
         </div>
 
@@ -48,7 +48,7 @@ const Header = () => {
           <Link to='/homebase'>
             <button
               type="button"
-              className="w-24 h-8 py-2 font-semibold rounded bg-blue-900 text-gray-200 "
+              className="w-24 h-8 py-2 font-semibold rounded bg-blue-900 text-gray-200 xs:mt-4"
             >
               Home Base
             </button>
