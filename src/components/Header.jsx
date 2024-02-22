@@ -38,7 +38,7 @@ const Header = () => {
             <Link to="album">
             <button
               type="button"
-              className="w-24 h-8 py-2 font-semibold rounded bg-yellow-400 text-gray-900 "
+              className="w-24 h-8 py-2 font-semibold rounded bg-yellow-400 text-gray-900 xs:mt-4"
             >
               Album
             </button>
