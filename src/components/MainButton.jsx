@@ -44,9 +44,9 @@ const MainButton = ({ action }) => {
   const saber = new Audio(lsaber);
 
   return (
-    <section className="p-6  flex-col items-center align-center xs:flex xs:justify-center xs:align-middle w-full">
+    <section className="p-2  flex-col items-center align-center xs:flex xs:justify-center xs:align-middle">
       <div className="mt-20 sm:mt-0 sm:flex justify-center align-middle">
-        <div className=" hidden md:block md:w-3/4">
+        <div className=" hidden md:block md:w-[500px] lg:w-[800px] xl:w-[1200px]">
           <ReactPlayer
             ref={reactPlayerRef} // Assign the ref to the ReactPlayer
             width="100%"
