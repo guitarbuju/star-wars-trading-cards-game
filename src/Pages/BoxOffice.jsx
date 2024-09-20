@@ -78,12 +78,12 @@ const BoxOffice = () => {
   return (
     <div>
       {clicked ? (
-        <div className="flex flex-col ">
-          <ul className="grid grid-cols-2 md:grid-cols-6 gap-1 md:mt-0  mt-28 lg:grid-cols-3">
+        <div className="flex flex-col mt-40 md:mt-0">
+          <ul className="grid grid-cols-2 tr:grid-cols-3 lg:grid-cols-6  gap-1 ">
             {filteredCards.map((card, index) => (
               <li
                 key={index}
-                className=" w-full flex justify-center align-middle"
+                className=" flex justify-center align-middle"
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 <Card img={card.img} name={card.name} id={card.id} />
