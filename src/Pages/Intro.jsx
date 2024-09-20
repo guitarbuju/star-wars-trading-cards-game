@@ -27,16 +27,14 @@ const Intro = () => {
   
 
   return (
-    <div className="flex flex-col">
-      <div className="flex justify-center align-middle">
+    <div className="flex flex-col items-center justify-center ">
+      <div className="flex justify-center align-middle h-[50vh]  xs:mt-20">
         {!show ? (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center align-middle gap-2  ">
          
-            
-            
               <h1
                 id="along"
-                className="leading-none sm:text-4xl text-xl mt-48"
+                className="leading-none sm:text-2xl text-xl "
                 style={{
                   color: "#10f9f1",
                   opacity: 0.8,
@@ -44,7 +42,7 @@ const Intro = () => {
                 }}
               >
                 A long time ago in a galaxy far, <br />
-                <span className="sm:mr-80 leading-none">far away ....</span>
+                <span className="sm:mr-120 leading-none">far away ....</span>
               </h1>
             
             <button id='presstart' className="mt-10 text-yellow-400"
