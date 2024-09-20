@@ -13,7 +13,7 @@ const Header = () => {
 
   // 
   return (
-    <header className="p-2  xs:mb-10 sm:mb-5 flex justify-center">
+    <header className="p-2  xs:mb-10 sm:mb-0 flex justify-center">
       <div className="container xs:w-3/4 sm:flex xs:justify-between h-16  md:w-full">
         <Link to="/">
           <button>

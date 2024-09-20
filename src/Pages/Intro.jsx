@@ -34,7 +34,7 @@ const Intro = () => {
          
               <h1
                 id="along"
-                className="leading-none sm:text-2xl text-xl "
+                className="leading-none sm:text-2xl text-xl pt-40 sm:pt-0"
                 style={{
                   color: "#10f9f1",
                   opacity: 0.8,
