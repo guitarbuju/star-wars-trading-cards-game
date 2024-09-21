@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
  import MainTheme from "../assets/Star_Wars_Main_Theme.mp3";
  import { useNavigate } from "react-router-dom";
@@ -27,14 +28,14 @@ const Intro = () => {
   
 
   return (
-    <div className="flex flex-col items-center justify-center ">
-      <div className="flex justify-center align-middle h-[50vh]  xs:mt-20">
+    <div className="flex flex-col items-center justify-center">
+      <div className="flex justify-center align-middle h-[50vh] xs:mt-20">
         {!show ? (
-          <div className="flex flex-col items-center align-middle gap-2  ">
+          <div className="flex flex-col items-center justify-center gap-2  ">
          
               <h1
                 id="along"
-                className="leading-none sm:text-2xl text-xl pt-40 sm:pt-0"
+                className="leading-none text-2xl sm:text-4xl  pt-40 sm:pt-0"
                 style={{
                   color: "#10f9f1",
                   opacity: 0.8,
@@ -59,7 +60,7 @@ const Intro = () => {
             <img
               id="maintitle"
               src="https://cdn.freebiesupply.com/logos/large/2x/star-wars-4-logo-png-transparent.png"
-              className="w-2/4 mt-40"
+              className="w-4/4 "
               alt="Star Wars Logo"
             />
           </div>
