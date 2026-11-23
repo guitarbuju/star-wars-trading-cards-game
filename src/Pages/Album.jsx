@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import Card2 from "../components/Card2";
 import { useAlbumContext } from '../../Context'
 

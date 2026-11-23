@@ -1,9 +1,3 @@
+const MainForm = () => null;
 
-
-const MainForm = () => {
-  return (
-
-  )
-}
-
-export default MainForm
+export default MainForm;
